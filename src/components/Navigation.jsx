@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-function Navigation() {
+function Navigation({ amount }) {
     return (
         <nav>
             <h1>Nav Bar</h1>
 
             <div>
                 <button>Cart</button>
-                <span>1 item</span>
+                <span>{amount} item</span>
             </div>
 
             <Link to="home">Home Page</Link>

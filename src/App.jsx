@@ -7,10 +7,18 @@ import './App.css'
 
 function App() {
 
+  const [cartAmount, setCartAmount] = useState(0);
+
+  const callbackFuntion = (amount) => {
+    setCartAmount(amount);
+  }
+
   return (
     <>
-      <Navigation />
-      <Outlet />
+      <Navigation
+        amount={cartAmount}/>
+      <Outlet
+        context={callbackFuntion}/>
     </>
   )
 }
