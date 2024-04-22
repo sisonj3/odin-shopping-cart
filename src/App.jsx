@@ -10,7 +10,7 @@ function App() {
   const [cartAmount, setCartAmount] = useState(0);
 
   const callbackFuntion = (amount) => {
-    setCartAmount(amount);
+    setCartAmount(cartAmount + parseInt(amount));
   }
 
   return (
