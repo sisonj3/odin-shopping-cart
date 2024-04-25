@@ -10,7 +10,7 @@ let prodArr = []
   for (let i = 1; i <= 5; i++){
     fetch(`https://fakestoreapi.com/products/${i}`)
     .then((response) => response.json())
-    .then((response) => prodArr.push({ title: response.title, image: response.image }))
+    .then((response) => prodArr.push({ title: response.title, image: response.image, id: response.id }))
     .catch((error) => console.error(error));
   }
 

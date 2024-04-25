@@ -9,8 +9,17 @@ function Shop() {
     return (
         <div>
             <h1>Shop Page</h1>
-            <Product
-                cartFunction={callbackFuntion}/>
+            <ul>
+                {products.map((product) => (
+                    <li key={product.id}>
+                        <Product
+                            cartFunction={callbackFuntion}
+                            name={product.title}
+                            img={product.image}
+                        />
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-function Product({ cartFunction }) {
+function Product({ cartFunction, name, img }) {
 
     const addAmountToCart = (event) => {
         let amount = event.target.parentNode.children[1].lastChild.value;
@@ -8,7 +8,9 @@ function Product({ cartFunction }) {
 
     return (
         <div>
-            <h2>Product Name</h2>
+            <h2>{name}</h2>
+
+            <img src={img} alt={name} />
 
             <div>
                 <label htmlFor="amount">Amount:</label>
