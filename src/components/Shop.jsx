@@ -2,7 +2,9 @@ import Product from './Product'
 import { useOutletContext } from 'react-router-dom';
 
 function Shop() {
-    const callbackFuntion = useOutletContext();
+    const [callbackFuntion, products] = useOutletContext();
+
+    console.log(products);
 
     return (
         <div>
