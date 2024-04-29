@@ -1,7 +1,7 @@
 function Product({ cartFunction, name, img }) {
 
     const addAmountToCart = (event) => {
-        let amount = event.target.parentNode.children[1].lastChild.value;
+        let amount = event.target.parentNode.children[2].lastChild.value;
         cartFunction(amount);
         event.preventDefault();
     };
